@@ -1,0 +1,32 @@
+/* styles/blog.module.css */
+
+.blog {
+    padding: 20px;
+  }
+  
+  .blogList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .blogItem {
+    margin-bottom: 30px;
+  }
+  
+  .date {
+    color: #888;
+  }
+  
+  .readMoreLink {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .readMoreLink:hover {
+    color: #0056b3;
+  }
+
+
+  

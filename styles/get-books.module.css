@@ -1,0 +1,34 @@
+/* styles/get-books.module.css */
+
+.getbooks_list {
+    color: #a7a227d7;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    background: url('https://images.unsplash.com/photo-1515513263345-cf961d304898?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ymx1cnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
+    background-size: cover;
+  }
+  
+  .image {
+    width: 30%;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  
+  .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .content {
+    width: 30%;
+  }
+
+
+  
