@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
+import styles from '../../../styles/Events.module.css';
 
 const SingleEvent = ({ data }) => {
   const inputEmail = useRef();
@@ -37,11 +38,11 @@ const SingleEvent = ({ data }) => {
   };
 
   return (
-    <div className="event_single_page">
+    <div className={styles.event_single_page}>
       
-      <Image src={data.image} width={700} height={600} alt={data.title} />
+      <Image src={data.image} width={800} height={600} alt={data.title} />
       
-      <form onSubmit={onSubmit} className="email_registration">
+      <form onSubmit={onSubmit} className={styles.email_registration}>
       <h1> {data.title} </h1>
       <p> {data.description} </p>
         <label> Get Registered for this event!</label>

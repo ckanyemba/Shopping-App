@@ -9,7 +9,7 @@ const AllEvents = ({ data }) => {
       {data?.map((ev) => (
         <Link key={ev.id} href={`/events/${ev.id}`} passHref legacyBehavior>
           <a className={styles.cards}>
-            <Image src={ev.image} alt={ev.title} width={250} height={220} /> <h2>{ev.title} </h2>
+            <Image src={ev.image} alt={ev.title} width={350} height={220} /> <h2>{ev.title} </h2>
           </a>
         </Link>
       ))}

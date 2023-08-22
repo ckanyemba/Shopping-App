@@ -1,17 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from '../../../styles/Events.module.css';
 
 const CatEvent = ({ data, pageName }) => {
   return (
-    <div className="cat_events">
+    <div className={styles.cat_events}>
       <h1> Events in {pageName} </h1>
 
-      <div className="content">
+      <div className={styles.content}>
         {data.map((ev) => (
           <Link key={ev.id} href={`/events/${ev.city}/${ev.id}`} passHref legacyBehavior>
-            <a className="card">
-              <Image width={350} height={300} alt={ev.title} src={ev.image} />
+            <a className={styles.card}>
+              <Image width={450} height={350} alt={ev.title} src={ev.image} />
               <h2> {ev.title} </h2>
               <p> {ev.description} </p>
             </a>

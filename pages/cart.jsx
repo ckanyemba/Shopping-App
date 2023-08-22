@@ -1,17 +1,19 @@
 import Image from 'next/image';
-// Importing hooks from react-redux
+import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
-import styles from '../styles/CartPage.module.css';
+import axios from 'axios';
+import { useRouter } from 'next/router';
 
-// Importing actions from  cart.slice.js
+// Importing actions from cart.slice.js
 import {
   incrementQuantity,
   decrementQuantity,
   removeFromCart,
 } from '../redux/cart.slice';
+import styles from '../styles/CartPage.module.css';
+import CheckoutPage from './CheckoutPage';
 
 const CartPage = () => {
-
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
@@ -21,6 +23,7 @@ const CartPage = () => {
       0
     );
   };
+
 
   return (
     <div className={styles.container}>
@@ -37,7 +40,7 @@ const CartPage = () => {
             <div>Total Price</div>
           </div>
           {cart.map((item) => (
-            <div className={styles.body}>
+            <div className={styles.body} key={item.id}>
               <div className={styles.image}>
                 <Image src={item.image} height="90" width="65" />
               </div>
@@ -58,7 +61,15 @@ const CartPage = () => {
               <p>$ {item.quantity * item.price}</p>
             </div>
           ))}
+          {/* Existing cart display code */}
+
           <h2>Grand Total: $ {getTotalPrice()}</h2>
+         <Link href={{
+        pathname: '/CheckoutPage',
+        query: { cartData: JSON.stringify(cart), totalPrice: getTotalPrice() }
+      }} passHref legacyBehavior>
+        <a className={styles.payNowButton}> Proceed to Checkout </a>
+      </Link>
         </>
       )}
     </div>

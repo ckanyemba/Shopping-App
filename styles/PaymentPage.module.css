@@ -1,0 +1,67 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  position: center;
+}
+
+.checkoutForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.payNowButton {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.summary {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.promoCodeContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.applyButton {
+  background-color: #28a745;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.applyButton:hover {
+  background-color: #218838;
+}
+
+/* Add more styles as needed */
+
+.payNowButton:hover {
+  background-color: #0056b3;
+}
+
+/* Add more styles as needed */

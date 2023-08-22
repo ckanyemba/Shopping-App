@@ -1,6 +1,8 @@
 .card {
     display: flex;
     flex-direction: column;
+    
+   
   }
 
 .cards {
@@ -8,22 +10,31 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2.5rem 1rem;
   place-items: center;
+  
 }
   
 .title {
-  font-size: 2rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   margin: 0 1rem 1rem;
+  width: 100%;
+  max-width: 180px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .container {
   padding: 0 2rem;
   margin-bottom: 2rem;
+  margin: 0 1rem 1rem;
 }
   
 .category {
     font-size: 0.8rem;
     text-transform: uppercase;
+    
   }
   .button {
     width: 100%;

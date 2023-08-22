@@ -9,12 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@paypal/checkout-server-sdk": "^1.0.3",
     "@reduxjs/toolkit": "^1.9.5",
-    "next": "^13.4.9",
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^2.1.0",
+    "axios": "^1.4.0",
+    "html-react-parser": "^4.2.1",
+    "isomorphic-unfetch": "^4.0.2",
+    "next": "^13.4.19",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
+    "react-html-parser": "^2.0.2",
     "react-redux": "^8.1.2",
-    "sass": "^1.65.1"
+    "sass": "^1.65.1",
+    "stripe": "^12.18.0",
+    "yoco": "^1.6.2"
   },
   "devDependencies": {
     "@types/node": "20.4.0",

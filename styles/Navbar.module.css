@@ -1,8 +1,8 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
+  flex-direction: column;
+  align-items: center; 
+  margin: 10px
 }
 .logo {
   font-size: 1.2rem;
@@ -23,4 +23,28 @@
 }
 .navlink a:hover {
   color: #f9826c;
+}
+
+.title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0 1rem 1rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .small {
+    display: flex;
+    flex-direction: column;
+    /* Adjust styles for small screens */
+  }
+  
+  .large {
+    display: none; /* Hide large category cards on small screens */
+  }
 }
